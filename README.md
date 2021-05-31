@@ -18,6 +18,7 @@ or
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 git clone https://github.com/snovvcrash/dotfiles-linux ~/.dotfiles
+
 ~/.dotfiles/00-autoconfig/*.sh
 
 
