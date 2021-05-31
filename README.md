@@ -1,7 +1,7 @@
 # First-strart
 For first start linux
 
-#cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
+cp /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 Debian:
 sudo apt install vim git zsh tmux htop wget curl -y
