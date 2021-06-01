@@ -1,0 +1,25 @@
+Для отправки через rsyslog 8x версий – создайте для rsyslog следующую конфигурацию в /etc/rsyslog.d/nginx.conf:
+
+ #nginx
+
+ # error log
+
+input (type="imfile" tag="nginx"
+
+PersistStateInterval="1000"
+
+      reopenOnTruncate="on"
+
+file="/var/log/nginx/*.log")  
+
+Включив предварительно в rsyslog.conf:
+
+module(load="imfile"
+
+     mode="inotify"
+
+)
+
+Для версий 7 и 8 rsyslog необходимо также указать в /etc/rsyslog.d/50-default.conf опцию отправки по tcp:
+
+*.*     @@ip:5014
